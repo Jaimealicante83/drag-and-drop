@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+	<link rel="stylesheet" href="style/style.css">
+  <title>Drag and Drop</title>
+</head>
+<body>
+
+<audio id="myAudio">
+  <source src="sonido.wav" type="audio/wav">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="audio_success">
+  <source src="sound_success.wav" type="audio/wav">
+  Your browser does not support the audio element.
+</audio>
+
+<img class="instruction_box" src="img/instruction_box.svg" /> 
+<div class="instruction_box_text">
+  <p class="simpleshow-Font" style="zIndex:670">Our mech pilots are at the ready! 
+    But before they launch, we need to construct the simpleMech X! 
+    Drag & Drop its parts to complete its build.</p>
+</div>
+
+
+
+
+<div id="starting_overlay_background"></div>
+
+<div id="ending_overlay_background"></div>
+
+<div class="container">
+
+  <!--This is the starting screen and its components -->
+  <img class="start_overlay" id="start_overlay_screen" src="img/start_overlay-box-large.svg">
+  <img onclick="startProgram()" class="button_start" id="button_start_program" src="img/start_button.svg" />
+  <img class="small_overlay" id="start_overlay_small" src="img/feedback_overlay-box-small.svg">
+  <img class="medium_overlay" id="start_overlay_medium" src="img/feedback_overlay-box-medium.svg">
+
+  <div id="instructions_starting_overlay">
+    <p class="simpleshow-Font">All systems are checked for simpleshow’s 
+      <span id="big_par">simpleMech X</span>.
+    </p>
+    <p class="simpleshow-Font">It’s time to put your skills to the test and 
+      build the mech suit for launch!
+    </p>
+  </div>
+
+
+  <!-- This is the ending screen that shows up when the program is over -->
+  <img class="end_overlay" id="ending_overlay_screen" src="img/feedback_overlay-box-large.svg">
+  <img class="end_small_overlay" id="end_overlay_small" src="img/feedback_overlay-box-small.svg">
+  <img class="end_medium_overlay" id="end_overlay_medium" src="img/feedback_overlay-box-medium.svg">
+
+  <div id="text_ending_overlay">
+    <p id="launch_title" class="simpleshow-Font">Launch success!</p>
+    <p class="simpleshow-Font"><span id="developertext">Great job, Developer!</span> <span id="developertext2">simpleMech X is 
+      fully operational</span> and good to go!”
+    </p>
+  </div>
+
+
+
+
+
+
+  <!-- These are the areas where the parts of the robot will be pluged in-->
+  <div id="dropzone_head" class="dropzone_head"></div>
+
+  <div id="dropzone_left_leg" class="dropzone_left_leg"></div>
+
+  <div id="dropzone_right_leg" class="dropzone_right_leg"></div>
+
+  <div id="dropzone_left_arm" class="dropzone_left_arm"></div>
+
+  <div id="dropzone_right_arm" class="dropzone_right_arm"></div>
+
+  <div id="dropzone_chest" class="dropzone_chest"></div>
+
+
+  <!--These are the parts of the robot -->
+    <div id="yes-drop-left-arm" class="drag-drop drag-1">
+        <img src="img/arm1.svg">
+    </div>
+
+    <div id="yes-drop-right-arm" class="drag-drop drag-2">
+      <img src="img/arm2.svg">
+    </div>
+
+    <div id="yes-drop-left-leg" class="drag-drop drag-3">
+      <img src="img/leg1.svg">
+    </div>
+  
+    <div id="yes-drop-right-leg" class="drag-drop drag-4">
+      <img src="img/leg2.svg">
+    </div>
+
+    <div id="yes-drop-head" class="drag-drop drag-5">
+      <img id="head_image" src="img/head.svg">
+    </div>
+
+    <div  id="yes-drop-chest" class="drag-drop drag-6">
+      <img id="chest_image" src="img/chest2.svg">
+    </div>
+
+</div>
+
+<!-- I am using the Interact.js library for the drag and drop functionality -->
+<script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
+
+
